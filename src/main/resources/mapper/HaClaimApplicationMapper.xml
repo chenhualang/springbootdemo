@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="tk.mybatis.mapper.mapper.HaClaimApplicationMapper" >
+  <resultMap id="BaseResultMap" type="tk.mybatis.mapper.model.HaClaimApplication" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="report_no" property="reportNo" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="source" property="source" jdbcType="VARCHAR" />
+    <result column="archive_no" property="archiveNo" jdbcType="VARCHAR" />
+    <result column="seppage_path_file_name" property="seppagePathFileName" jdbcType="VARCHAR" />
+    <result column="channel_application_id" property="channelApplicationId" jdbcType="VARCHAR" />
+    <result column="image_no" property="imageNo" jdbcType="VARCHAR" />
+    <result column="seppage_path" property="seppagePath" jdbcType="VARCHAR" />
+    <result column="loss_code" property="lossCode" jdbcType="VARCHAR" />
+    <result column="insurance_name" property="insuranceName" jdbcType="VARCHAR" />
+    <result column="insurance_ceti_no" property="insuranceCetiNo" jdbcType="VARCHAR" />
+    <result column="insurance_ceti_type" property="insuranceCetiType" jdbcType="VARCHAR" />
+    <result column="accident_date" property="accidentDate" jdbcType="TIMESTAMP" />
+    <result column="accident_area" property="accidentArea" jdbcType="VARCHAR" />
+    <result column="accident_place" property="accidentPlace" jdbcType="VARCHAR" />
+    <result column="accident_process" property="accidentProcess" jdbcType="VARCHAR" />
+    <result column="reporter" property="reporter" jdbcType="VARCHAR" />
+    <result column="reporter_insured_relation" property="reporterInsuredRelation" jdbcType="VARCHAR" />
+    <result column="tel_no" property="telNo" jdbcType="VARCHAR" />
+    <result column="mobile_no" property="mobileNo" jdbcType="VARCHAR" />
+    <result column="claim_amount" property="claimAmount" jdbcType="VARCHAR" />
+    <result column="claim_currency" property="claimCurrency" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="handler" property="handler" jdbcType="VARCHAR" />
+    <result column="reported_date" property="reportedDate" jdbcType="TIMESTAMP" />
+    <result column="death_date" property="deathDate" jdbcType="TIMESTAMP" />
+    <result column="close_date" property="closeDate" jdbcType="TIMESTAMP" />
+    <result column="creator" property="creator" jdbcType="VARCHAR" />
+    <result column="creator_no" property="creatorNo" jdbcType="VARCHAR" />
+    <result column="gmt_created" property="gmtCreated" jdbcType="TIMESTAMP" />
+    <result column="modifier" property="modifier" jdbcType="VARCHAR" />
+    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <result column="extra_info" property="extraInfo" jdbcType="VARCHAR" />
+    <result column="is_deleted" property="isDeleted" jdbcType="VARCHAR" />
+    <result column="istpaDispatch" property="istpadispatch" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="gender" property="gender" jdbcType="VARCHAR" />
+    <result column="birth_day" property="birthDay" jdbcType="DATE" />
+    <result column="channel_batch_no" property="channelBatchNo" jdbcType="VARCHAR" />
+    <result column="channel_report_no" property="channelReportNo" jdbcType="VARCHAR" />
+    <result column="adjustment_date" property="adjustmentDate" jdbcType="TIMESTAMP" />
+    <result column="tpa_source" property="tpaSource" jdbcType="VARCHAR" />
+    <result column="master_insured_cert_no" property="masterInsuredCertNo" jdbcType="VARCHAR" />
+    <result column="master_insured_cert_type" property="masterInsuredCertType" jdbcType="VARCHAR" />
+    <result column="is_campaign" property="isCampaign" jdbcType="TINYINT" />
+    <result column="diagnosis_date" property="diagnosisDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>
