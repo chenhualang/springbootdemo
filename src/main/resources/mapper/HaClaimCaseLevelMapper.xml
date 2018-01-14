@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tk.mybatis.mapper.mapper.HaClaimCaseLevelMapper">
+  <resultMap id="BaseResultMap" type="tk.mybatis.mapper.model.HaClaimCaseLevel">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="report_no" jdbcType="VARCHAR" property="reportNo" />
+    <result column="score" jdbcType="INTEGER" property="score" />
+    <result column="level" jdbcType="DOUBLE" property="level" />
+    <result column="extra_info" jdbcType="VARCHAR" property="extraInfo" />
+    <result column="creator" jdbcType="VARCHAR" property="creator" />
+    <result column="gmt_created" jdbcType="TIMESTAMP" property="gmtCreated" />
+    <result column="modifier" jdbcType="VARCHAR" property="modifier" />
+    <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+    <result column="is_deleted" jdbcType="CHAR" property="isDeleted" />
+    <result column="claim_id" jdbcType="BIGINT" property="claimId" />
+    <result column="insured_name" jdbcType="VARCHAR" property="insuredName" />
+    <result column="insured_id" jdbcType="BIGINT" property="insuredId" />
+    <result column="applicant" jdbcType="VARCHAR" property="applicant" />
+    <result column="applicant_id" jdbcType="BIGINT" property="applicantId" />
+    <result column="policy_product_name" jdbcType="VARCHAR" property="policyProductName" />
+    <result column="policy_product_id" jdbcType="BIGINT" property="policyProductId" />
+    <result column="policy_no" jdbcType="VARCHAR" property="policyNo" />
+    <result column="policy_id" jdbcType="BIGINT" property="policyId" />
+    <result column="report_date" jdbcType="TIMESTAMP" property="reportDate" />
+  </resultMap>
+  <update id="updatebyCaseLevel" parameterType="tk.mybatis.mapper.model.HaClaimCaseLevel" >
+    UPDATE ha_claim_case_level set level =#{level,jdbcType=DOUBLE} where report_no = #{reportNo,jdbcType=VARCHAR}
+  </update>
+  <select id="selectHaClaimCaseLevel" parameterType="tk.mybatis.mapper.model.HaClaimCaseLevel" resultMap="BaseResultMap">
+    SELECT * from ha_claim_case_level where report_no = #{reportNo,jdbcType=VARCHAR}
+  </select>
+  <insert id="saveHaClaimCaseLevel" parameterType="tk.mybatis.mapper.model.HaClaimCaseLevel">
+    insert into ha_claim_case_level (id, report_no, score,
+    level, extra_info, creator,
+    gmt_created, modifier, gmt_modified,
+    is_deleted, claim_id, insured_name,
+    insured_id, applicant, applicant_id,
+    policy_product_name, policy_product_id, policy_no,
+    policy_id, report_date)
+    values (#{id,jdbcType=BIGINT}, #{reportNo,jdbcType=VARCHAR}, #{score,jdbcType=INTEGER},
+    #{level,jdbcType=INTEGER}, #{extraInfo,jdbcType=VARCHAR}, "system",
+    now(), "system", now(),
+    'N', #{claimId,jdbcType=BIGINT}, #{insuredName,jdbcType=VARCHAR},
+    #{insuredId,jdbcType=BIGINT}, #{applicant,jdbcType=VARCHAR}, #{applicantId,jdbcType=BIGINT},
+    #{policyProductName,jdbcType=VARCHAR}, #{policyProductId,jdbcType=BIGINT}, #{policyNo,jdbcType=VARCHAR},
+    #{policyId,jdbcType=BIGINT}, now())
+  </insert>
+</mapper>

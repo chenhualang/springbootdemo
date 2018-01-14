@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="tk.mybatis.mapper.mapper.HaTpaReportMapper" >
+  <resultMap id="BaseResultMap" type="tk.mybatis.mapper.model.HaTpaReport" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="serial_no" property="serialNo" jdbcType="VARCHAR" />
+    <result column="app_holder_no" property="appHolderNo" jdbcType="VARCHAR" />
+    <result column="app_holder_name" property="appHolderName" jdbcType="VARCHAR" />
+    <result column="group_policy_no" property="groupPolicyNo" jdbcType="VARCHAR" />
+    <result column="individual_policy_no" property="individualPolicyNo" jdbcType="VARCHAR" />
+    <result column="plan_name" property="planName" jdbcType="VARCHAR" />
+    <result column="cust_no" property="custNo" jdbcType="VARCHAR" />
+    <result column="insurance_name" property="insuranceName" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="CHAR" />
+    <result column="birth_date" property="birthDate" jdbcType="DATE" />
+    <result column="cert_type" property="certType" jdbcType="VARCHAR" />
+    <result column="cert_no" property="certNo" jdbcType="VARCHAR" />
+    <result column="english_name" property="englishName" jdbcType="VARCHAR" />
+    <result column="chinese_and_english_name" property="chineseAndEnglishName" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="job_location" property="jobLocation" jdbcType="VARCHAR" />
+    <result column="department" property="department" jdbcType="VARCHAR" />
+    <result column="department_code" property="departmentCode" jdbcType="VARCHAR" />
+    <result column="reporter_insured_relation" property="reporterInsuredRelation" jdbcType="VARCHAR" />
+    <result column="personnelType" property="personneltype" jdbcType="VARCHAR" />
+    <result column="accident_reason" property="accidentReason" jdbcType="VARCHAR" />
+    <result column="accident_date" property="accidentDate" jdbcType="DATE" />
+    <result column="accident_month" property="accidentMonth" jdbcType="DATE" />
+    <result column="report_date" property="reportDate" jdbcType="DATE" />
+    <result column="register_no" property="registerNo" jdbcType="VARCHAR" />
+    <result column="product_name" property="productName" jdbcType="VARCHAR" />
+    <result column="liability_name" property="liabilityName" jdbcType="VARCHAR" />
+    <result column="hospital_name" property="hospitalName" jdbcType="VARCHAR" />
+    <result column="hospital_department_name" property="hospitalDepartmentName" jdbcType="VARCHAR" />
+    <result column="diagnosis" property="diagnosis" jdbcType="VARCHAR" />
+    <result column="disease_code" property="diseaseCode" jdbcType="VARCHAR" />
+    <result column="claim_amount" property="claimAmount" jdbcType="DECIMAL" />
+    <result column="herbal_medicine_fee" property="herbalMedicineFee" jdbcType="DECIMAL" />
+    <result column="therapy_fee" property="therapyFee" jdbcType="DECIMAL" />
+    <result column="medicare_deduct_amount" property="medicareDeductAmount" jdbcType="DECIMAL" />
+    <result column="nonresponsible_amount" property="nonresponsibleAmount" jdbcType="DECIMAL" />
+    <result column="medicare_pay_amount" property="medicarePayAmount" jdbcType="DECIMAL" />
+    <result column="other_amount" property="otherAmount" jdbcType="DECIMAL" />
+    <result column="check_amount" property="checkAmount" jdbcType="DECIMAL" />
+    <result column="paid_proportion" property="paidProportion" jdbcType="DECIMAL" />
+    <result column="paid_amount" property="paidAmount" jdbcType="DECIMAL" />
+    <result column="deduct_instruction" property="deductInstruction" jdbcType="VARCHAR" />
+    <result column="case_status" property="caseStatus" jdbcType="VARCHAR" />
+    <result column="close_date" property="closeDate" jdbcType="DATE" />
+    <result column="close_month" property="closeMonth" jdbcType="DATE" />
+    <result column="close_duration" property="closeDuration" jdbcType="VARCHAR" />
+    <result column="account_bank_name" property="accountBankName" jdbcType="VARCHAR" />
+    <result column="trans_account_name" property="transAccountName" jdbcType="VARCHAR" />
+    <result column="trans_account" property="transAccount" jdbcType="VARCHAR" />
+    <result column="trans_date" property="transDate" jdbcType="DATE" />
+    <result column="trans_duration" property="transDuration" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="source" property="source" jdbcType="VARCHAR" />
+    <result column="tpa_case_no" property="tpaCaseNo" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -52,5 +52,25 @@
     <result column="master_insured_cert_type" property="masterInsuredCertType" jdbcType="VARCHAR" />
     <result column="is_campaign" property="isCampaign" jdbcType="TINYINT" />
     <result column="diagnosis_date" property="diagnosisDate" jdbcType="TIMESTAMP" />
+    <result column="level" jdbcType="INTEGER" property="level" />
   </resultMap>
+  <select id="selectApplicationList" parameterType="dataobject.HaClaimApplicationDO" resultMap="BaseResultMap">
+    select a.*,b.level
+    from ha_claim_application a
+    left join ha_claim_case_level b
+    on a.report_no=b.report_no and b.is_deleted='N'
+    where  a.is_deleted = 'N'
+    <if test="reportNo != null" >
+      AND a.report_no = #{reportNo,jdbcType=VARCHAR}
+    </if>
+    <if test="source != null" >
+      AND a.source = #{source,jdbcType=VARCHAR}
+    </if>
+    <if test="level != null" >
+      AND b.level = #{level,jdbcType=INTEGER}
+    </if>
+  </select>
+  <select id="selectPart" resultMap="BaseResultMap" >
+    select * from ha_claim_application where id BETWEEN  #{arg0} AND  #{arg1}
+  </select>
 </mapper>

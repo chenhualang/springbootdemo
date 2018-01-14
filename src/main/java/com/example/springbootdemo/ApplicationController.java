@@ -2,14 +2,15 @@ package com.example.springbootdemo;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import dataobject.HaClaimApplicationDO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import tk.mybatis.mapper.mapper.HaClaimApplicationMapper;
 import tk.mybatis.mapper.model.HaClaimApplication;
 
+import java.util.Date;
 import java.util.List;
 
 @RequestMapping("application")
@@ -27,18 +28,30 @@ public class ApplicationController {
     }
 
     @RequestMapping(value = "/selectByPage",method = RequestMethod.POST)
-    public PageInfo<HaClaimApplication> selectApplicationByPage(int currentPage, int pageSize){
+    public PageInfo<HaClaimApplicationDO> selectApplicationByPage(int currentPage, int pageSize){
         PageHelper.startPage(currentPage, pageSize);
-        HaClaimApplication t = new HaClaimApplication();
+        HaClaimApplicationDO t = new HaClaimApplicationDO();
         t.setSource("op");
 //        t.setStatus("reportClosed");
-        List<HaClaimApplication> haClaimApplications = applicationMapper.select(t);
-        PageInfo<HaClaimApplication> pageInfo = new PageInfo<>(haClaimApplications);
+        t.setLevel(1);
+        List<HaClaimApplicationDO> haClaimApplications = applicationMapper.selectApplicationList(t);
+        PageInfo<HaClaimApplicationDO> pageInfo = new PageInfo<>(haClaimApplications);
         return pageInfo;
     }
 
-//    @RequestMapping("update")
-//    public int update(HaClaimApplication t){
-//        return applicationMapper.
-//    }
+    @RequestMapping("/query")
+    public int selectByCondition(HaClaimApplication condition){
+        HaClaimApplication t = new HaClaimApplication();
+        t.setId(9840003L);
+        List<HaClaimApplication> haClaimApplicationList = applicationMapper.select(t);
+        HaClaimApplication haClaimApplication = haClaimApplicationList.get(0);
+        Date closeDate = haClaimApplication.getCloseDate();
+        return 1;
+    }
+
+    @RequestMapping("/selectPart")
+    public List<HaClaimApplication> getPart(){
+        List<HaClaimApplication> list = applicationMapper.selectPart(9840001L,9840005L);
+        return list;
+    }
 }
