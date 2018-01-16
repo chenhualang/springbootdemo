@@ -16,7 +16,7 @@
 //@RequestMapping(HaClaimWebUriConst.CL_WEB_ENUM_ROOT_URI)
 //public class HaClaimEnumResourceContoller {
 //    static {
-//        CfgLoaderFactory.registerEnm("com.zhongan.health.common.share.enm", "com.zhongan.astraea.share.constants");
+//        CfgLoaderFactory.registerEnm("com.chen.health.common.share.enm", "com.chen.astraea.share.constants");
 //    }
 //    private final int maxAgeInSeconds = 21600;
 //
